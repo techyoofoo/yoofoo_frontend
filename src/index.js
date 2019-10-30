@@ -1,8 +1,24 @@
+// import * as singleSpa from 'single-spa';
+
+// singleSpa.registerApplication('app-1', () =>
+//   import ('./login/login-form.js'), pathPrefix('/'));
+// singleSpa.registerApplication('app-2', () =>
+//   import ('./test/index.js'), pathPrefix('/root'));
+
+// singleSpa.start();
+
+// function pathPrefix(prefix) {
+//   return function(location) {
+//     return location.pathname.startsWith(`${prefix}`);
+//   }
+// }
+
 import {declareChildApplication, start} from 'single-spa';
 import 'babel-polyfill';
 
 // declareChildApplication('navbar', () => import('./navbar/navbar.app.js'), () => true);
 declareChildApplication('home', () => import('./login/login-form.js'), () => location.pathname === "" || location.pathname === "/");
+declareChildApplication('test', () => import('./test/index.js'), () => location.pathname === "" || location.pathname === "/test");
 // declareChildApplication('angularjs', () => import('./angularjs/angularjs.app.js'), pathPrefix('/angularjs'));
 // declareChildApplication('react', () => import('./react/react.app.js'), pathPrefix('/react'));
 // declareChildApplication('angular', () => import('./angular/angular.app.js'), pathPrefix('/angular'));
@@ -22,18 +38,3 @@ function pathPrefix(prefix) {
     }
 }
 
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-
-// const App = () =>(
-//     <div>
-//         <p>Welcome</p>
-//     </div>
-// )
-
-
-// ReactDOM.render(
-//     <App/>,
-//     document.getElementById('root')
-// )
