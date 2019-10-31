@@ -11,6 +11,8 @@ import ForgotPassword from "./forgotpassword";
 import ChangePassword from "./changepassword";
 import RankScreen from "./rank";
 import VolumesScreen from "./volumes";
+// import '../extract_plugins/comission/manifest.json';
+// import data from "../extract_plugins/comission/manifest"
 import CommissionsScreen from "../extract_plugins/comission/comission-screen";
 
 export default class Root extends React.Component {
@@ -21,6 +23,9 @@ export default class Root extends React.Component {
     };
   }
   componentWillMount() {
+    // console.log('Welcome to Manifest');
+    // const socialMediaList = data.version_no;
+    // console.log('Welcome to Manifest', socialMediaList, data.menu);
     // this.subscription = showFrameworkObservable.subscribe(newValue => this.setState({frameworkInspector: newValue}));
   }
   render() {
@@ -39,12 +44,13 @@ export default class Root extends React.Component {
             <Route exact path="/forgotpassword" component={ForgotPassword} />
             <Route exact path="/changepassword" component={ChangePassword} />
           </Switch>
-          <Switch>
+          {/* <Switch>
             <Route exact path="/commissions" component={CommissionsScreen} />
-          </Switch>
+          </Switch> */}
           {/* <Route exact path="/commissions"  component={CommissionsScreen} />  */}
           <Route exact path="/rank" component={RankScreen} />
           <Route exact path="/volumes" component={VolumesScreen} />
+<Route exact path="/commissions" component={CommissionsScreen} />
         </div>
       </HashRouter>
     );

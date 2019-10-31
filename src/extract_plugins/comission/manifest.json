@@ -1,0 +1,8 @@
+{
+    "plugin_name":"Commission",
+    "version_no":"1.0",
+    "menu":[{
+        "Comissions":"./comission-screen",
+        "Ranks":"./ranks-screen.js"
+    }]
+}
