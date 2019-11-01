@@ -51,6 +51,7 @@ export default class Sidebarmenu  extends Component{
                       <Card.Body>
                         <div className="leftnavlinks">
                           <ul>
+                          <input type="hidden" id="1" />
 <li><i className="fa fa-caret-right rightarrow" aria-hidden="true"></i> <Link to="/Comissions">Comissions</Link></li>
 <li><i className="fa fa-caret-right rightarrow" aria-hidden="true"></i> <Link to="/Ranks">Ranks</Link></li>
                             <li><i className="fa fa-caret-right rightarrow" aria-hidden="true"></i> <Link to="/rank">RANK ADVANCEMENT</Link> </li>
@@ -90,7 +91,24 @@ export default class Sidebarmenu  extends Component{
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card> */}
-                </Accordion>
+               
+<Card>
+                          <Accordion.Toggle as={Card.Header} eventKey="3">
+                            Commission <i className="fa fa-angle-down dwnarrow" aria-hidden="true"></i>
+                          </Accordion.Toggle>
+                          <Accordion.Collapse eventKey="3">
+                            <Card.Body>
+                              <div className="leftnavlinks">
+                                <ul>
+                                  <input type="hidden" id="3" />
+                                  <li><i className="fa fa-caret-right rightarrow" aria-hidden="true"></i> <Link to="/comission-screen">CommissionsScreen</Link></li>
+<li><i className="fa fa-caret-right rightarrow" aria-hidden="true"></i> <Link to="/rank-screen">RankScreen</Link></li>
+                                </ul>
+                              </div>
+                            </Card.Body>
+                          </Accordion.Collapse>
+                        </Card>
+</Accordion>
                 </div>
               </div>
             </div>

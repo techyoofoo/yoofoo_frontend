@@ -9,11 +9,12 @@ import InstallScreen from "./install";
 import UninstallScreen from "./uninstall";
 import ForgotPassword from "./forgotpassword";
 import ChangePassword from "./changepassword";
-import RankScreen from "./rank";
+// import RankScreen from "./rank";
 import VolumesScreen from "./volumes";
 // import '../extract_plugins/comission/manifest.json';
 // import data from "../extract_plugins/comission/manifest"
 import CommissionsScreen from "../extract_plugins/comission/comission-screen";
+import RankScreen from "../extract_plugins/comission/rank-screen";
 
 export default class Root extends React.Component {
   constructor() {
@@ -48,9 +49,9 @@ export default class Root extends React.Component {
             <Route exact path="/commissions" component={CommissionsScreen} />
           </Switch> */}
           {/* <Route exact path="/commissions"  component={CommissionsScreen} />  */}
-          <Route exact path="/rank" component={RankScreen} />
-          <Route exact path="/volumes" component={VolumesScreen} />
-<Route exact path="/commissions" component={CommissionsScreen} />
+          {/* <Route exact path="/rank" component={RankScreen} /> */}
+<Route exact path="/comission-screen" component={CommissionsScreen} />
+<Route exact path="/rank-screen" component={RankScreen} />
         </div>
       </HashRouter>
     );
