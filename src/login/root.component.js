@@ -15,6 +15,8 @@ import VolumesScreen from "./volumes";
 // import data from "../extract_plugins/comission/manifest"
 import CommissionsScreen from "../extract_plugins/comission/comission-screen";
 import RankScreen from "../extract_plugins/comission/rank-screen";
+import AdminScreen from "../extract_plugins/Admin/comission-screen";
+import AdminUserScreen from "../extract_plugins/Admin/rank-screen";
 
 export default class Root extends React.Component {
   constructor() {
@@ -52,6 +54,8 @@ export default class Root extends React.Component {
           {/* <Route exact path="/rank" component={RankScreen} /> */}
 <Route exact path="/comission-screen" component={CommissionsScreen} />
 <Route exact path="/rank-screen" component={RankScreen} />
+<Route exact path="/comission-screen" component={AdminScreen} />
+<Route exact path="/rank-screen" component={AdminUserScreen} />
         </div>
       </HashRouter>
     );

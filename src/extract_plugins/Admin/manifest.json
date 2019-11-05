@@ -1,0 +1,8 @@
+{
+    "plugin_name":"Admin",
+    "version_no":"1.0",
+    "menu":[{
+        "AdminScreen":"./comission-screen",
+        "AdminUserScreen":"./rank-screen"
+    }]
+}
